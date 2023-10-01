@@ -21,17 +21,11 @@ public class FrequencyController {
 
     @GetMapping("/count")
     public ResponseEntity<?> countCharacterFrequency(@RequestParam("input") String input) {
-        // Проверяем, является ли строка пустой
         if (input == null || input.isEmpty()) {
-            // Возвращаем ошибку с соответствующим статусом
             Map<String, String> errorResponse = Collections.singletonMap("error", "Вы ввели пустую строку");
             return ResponseEntity.badRequest().body(errorResponse);
         }
-
-        // Вызываем сервисный метод для подсчета частоты символов
         Map<Character, Integer> frequencyMap = frequencyService.countCharacterFrequency(input);
-
-        // Возвращаем успешный результат с частотой символов
         return ResponseEntity.ok(frequencyMap);
     }
 

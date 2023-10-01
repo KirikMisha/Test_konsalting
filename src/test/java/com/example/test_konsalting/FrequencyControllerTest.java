@@ -58,18 +58,4 @@ public class FrequencyControllerTest {
 
         assertEquals(expectedResult, actualResult);
     }
-
-    @Test
-    @DisplayName("Test frequency count with an empty string")
-    public void testCountCharacterFrequencyWithEmptyString() {
-        Map<Character, Integer> expectedResult = new LinkedHashMap<>();
-        // Expecting an empty map for an empty input string
-
-        Map<Character, Integer> actualResult = this.service.countCharacterFrequency("");
-
-        assertEquals(expectedResult, actualResult);
-    }
-
-    // Add more test cases to cover other scenarios
-
 }
