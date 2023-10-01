@@ -1,9 +1,11 @@
 package com.example.test_konsalting;
 
 import com.example.test_konsalting.services.FrequencyService;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
